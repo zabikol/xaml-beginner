@@ -17,9 +17,25 @@
             <ColumnDefinition Width=".5*" />
             <ColumnDefinition Width=".5*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Restaurant Manager" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
-        <TextBlock Text="Internal Test Version" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
-        <TextBlock Grid.Row="2" TextWrapping="WrapWholeWords" Text="**Go to Orders View**" VerticalAlignment="Center" HorizontalAlignment="Center" />
-        <TextBlock Grid.Row="2" TextWrapping="WrapWholeWords" Text="**Submit Order**" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Center" />
+        <TextBlock Text="Restaurant Manager"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center" />
+        <TextBlock Text="Internal Test Version"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center" />
+        <TextBlock Text="**Go to Orders View**"
+                   Grid.Row="2"
+                   TextWrapping="WrapWholeWords"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+        <TextBlock Text="**Submit Order**"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   TextWrapping="WrapWholeWords"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
     </Grid>
 </Page>
