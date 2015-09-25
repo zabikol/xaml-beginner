@@ -1,24 +1,20 @@
-﻿<Page x:Class="RestaurantManager.UniversalWindows.ExpeditePage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:local="using:RestaurantManager.UniversalWindows"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      mc:Ignorable="d">
-    <Page.TopAppBar>
-        <AppBar>
-            <AppBarButton  x:Name="Home_BarButton" Icon="Home" Label="Home" Click="Home_BarButton_Click" />
-        </AppBar>
-    </Page.TopAppBar>
+﻿<Page
+    x:Class="RestaurantManager.UniversalWindows.ExpeditePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RestaurantManager.UniversalWindows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.9*" />
             <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
-        <GridView x:Name="placeholder_gridView" Grid.Row="0" Background="#4DFF0000" Margin="10" />
-        <Button Content="Clear All Orders"
-                Grid.Row="1"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
+        <TextBlock Text="**Clear All Orders**"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
     </Grid>
 </Page>

@@ -5,14 +5,8 @@
       xmlns:local="using:RestaurantManager.UniversalWindows"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
-    <Page.TopAppBar>
-        <AppBar>
-            <AppBarButton  x:Name="Home_BarButton" Icon="Home" Label="Home" Click="Home_BarButton_Click" />
-        </AppBar>
-    </Page.TopAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
             <RowDefinition Height="1*" />
@@ -25,29 +19,26 @@
             <ColumnDefinition Width=".25*" />
             <ColumnDefinition Width=".25*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Special Requests:"
-                   Grid.Row="1"
+        <TextBlock Grid.Row="1"
                    Grid.Column="1"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Top" />
-        <TextBlock Text="Order Items:"
-                   Grid.Row="1"
+                   VerticalAlignment="Top"
+                   Text="Special Requests:" />
+        <TextBlock Grid.Row="1"
                    Grid.Column="2"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Top" />
-        <Button x:Name="AddOrder_button" Content="Add to Order"
-                Grid.Row="4"
-                Grid.Column="0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-
-        <Button x:Name="SubmitOrder_button" Content="Submit Order"
-                Grid.Row="4"
-                Grid.Column="1"
-                Grid.ColumnSpan="2"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-        <ListView x:Name="left_placeholder_listView" Margin="10" Grid.Row="1" Background="#7E19BB28" Grid.RowSpan="3" />
-        <ListView x:Name="right_placeholder_listView" Grid.Column="2" Margin="10" Grid.Row="2" Background="#7F10D8E2" Grid.RowSpan="2" />
+                   VerticalAlignment="Top"
+                   Text="Order Items:" />
+        <TextBlock Grid.Row="4"
+                   Grid.Column="0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="**Add to Order**" />
+        <TextBlock Text="**Submit Order**"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
     </Grid>
 </Page>

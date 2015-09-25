@@ -26,10 +26,5 @@ namespace RestaurantManager.UniversalWindows
         {
             this.InitializeComponent();
         }
-
-        private void Home_BarButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
     }
 }
