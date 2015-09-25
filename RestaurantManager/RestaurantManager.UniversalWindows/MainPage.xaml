@@ -1,11 +1,10 @@
-﻿<Page
-    x:Class="RestaurantManager.UniversalWindows.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:RestaurantManager.UniversalWindows"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+﻿<Page x:Class="RestaurantManager.UniversalWindows.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:RestaurantManager.UniversalWindows"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -26,16 +25,18 @@
                    Grid.Row="1"
                    VerticalAlignment="Bottom"
                    HorizontalAlignment="Center" />
-        <TextBlock Text="**Go to Orders View**"
-                   Grid.Row="2"
-                   TextWrapping="WrapWholeWords"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center" />
-        <TextBlock Text="**Submit Order**"
-                   Grid.Row="2"
-                   Grid.Column="1"
-                   TextWrapping="WrapWholeWords"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center" />
+        <Button x:Name="OrdersButton"
+                Content="Go to Orders View"
+                Click="OrdersButton_Click"
+                Grid.Row="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" />
+        <Button x:Name="SubmitButton"
+                Content="Submit Order"
+                Click="SubmitButton_Click"
+                Grid.Row="2"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" />
     </Grid>
 </Page>
