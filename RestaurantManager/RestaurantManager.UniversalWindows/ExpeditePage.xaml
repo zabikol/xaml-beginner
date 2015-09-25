@@ -7,7 +7,10 @@
       mc:Ignorable="d">
     <Page.TopAppBar>
         <AppBar>
-            <AppBarButton  x:Name="Home_BarButton" Icon="Home" Label="Home" Click="Home_BarButton_Click" />
+            <AppBarButton x:Name="Home_BarButton"
+                          Icon="Home"
+                          Label="Home"
+                          Click="Home_BarButton_Click" />
         </AppBar>
     </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -15,7 +18,10 @@
             <RowDefinition Height="0.9*" />
             <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
-        <GridView x:Name="placeholder_gridView" Grid.Row="0" Background="#4DFF0000" Margin="10" />
+        <GridView x:Name="placeholder_gridView"
+                  Grid.Row="0"
+                  Background="#4DFF0000"
+                  Margin="10" />
         <Button Content="Clear All Orders"
                 Grid.Row="1"
                 HorizontalAlignment="Center"
