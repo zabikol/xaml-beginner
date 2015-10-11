@@ -31,5 +31,11 @@ namespace RestaurantManager.UniversalWindows
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var ds = (RestaurantManager.Models.DataManager)DataContext;
+            ds.OrderItems.Clear();
+        }
     }
 }

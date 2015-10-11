@@ -4,6 +4,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="using:RestaurantManager.UniversalWindows"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      DataContext="{StaticResource DataManager}"
+      d:DataContext="{StaticResource DataManager}"
       mc:Ignorable="d">
     <Page.TopAppBar>
         <AppBar>
@@ -28,10 +30,10 @@
             <ColumnDefinition Width=".25*" />
             <ColumnDefinition Width=".25*" />
         </Grid.ColumnDefinitions>
-        <ListView x:Name="left_placeholder_listView"
+        <ListView x:Name="MenuItems_listView"
+                  ItemsSource="{Binding MenuItems}"
                   Margin="10"
                   Grid.Row="1"
-                  Background="#7E19BB28"
                   Grid.RowSpan="3" />
         <TextBlock Text="Special Requests:"
                    Grid.Row="1"
@@ -43,25 +45,28 @@
                    Grid.Column="2"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top" />
-        <ListView x:Name="right_placeholder_listView"
+
+        <ListView x:Name="selectedItems_listView"
+                  ItemsSource="{Binding Path=CurrentlySelectedMenuItems,
+                                        Mode=TwoWay}"
                   Grid.Column="2"
                   Margin="10"
                   Grid.Row="2"
-                  Background="#7F10D8E2"
                   Grid.RowSpan="2" />
         <Button x:Name="AddOrder_button"
                 Content="Add to Order"
                 Grid.Row="4"
                 Grid.Column="0"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-
+                VerticalAlignment="Center"
+                Click="AddOrder_button_Click" />
         <Button x:Name="SubmitOrder_button"
                 Content="Submit Order"
                 Grid.Row="4"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
+                VerticalAlignment="Center"
+                Click="SubmitOrder_button_Click" />
     </Grid>
 </Page>
