@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 namespace RestaurantManager.UniversalWindows
 {
@@ -23,14 +10,14 @@ namespace RestaurantManager.UniversalWindows
             this.InitializeComponent();
         }
 
-        private void OrdersButton_Click(object sender, RoutedEventArgs e)
+        private void ExpeditePage_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ExpeditePage));
+            this.Frame.Navigate(typeof(ExpeditePage));
         }
 
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        private void OrderPage_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OrderPage));
+            this.Frame.Navigate(typeof(OrderPage));
         }
     }
 }

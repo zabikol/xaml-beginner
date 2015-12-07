@@ -1,41 +1,21 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace RestaurantManager.Models
+﻿namespace RestaurantManager.Models
 {
-    public class DataManager
+    public abstract class DataManager
     {
+        protected RestaurantContext Repository { get; private set; }
+
         public DataManager()
         {
-            this.OrderItems = new ObservableCollection<string>(
-                new List<string>
-                {
-                    "Steak, Chicken, Peas",
-                    "Rice, Chicken",
-                    "Hummus, Pita"
-                }
-            );
-
-            this.MenuItems = new List<string>
-            {
-                "Steak",
-                "Chicken",
-                "Peas",
-                "Rice",
-                "Hummus",
-                "Pita"
-            };
-
-            CurrentlySelectedMenuItems = new ObservableCollection<string>(
-                new List<string>
-                {
-                "Rice",
-                "Pita"
-            });
+            LoadData();
         }
 
-        public ObservableCollection<string> OrderItems { get; set; }
-        public List<string> MenuItems { get; set; }
-        public ObservableCollection<string> CurrentlySelectedMenuItems { get; set; }
+        private async void LoadData()
+        {
+            this.Repository = new RestaurantContext();
+            await this.Repository.InitializeContextAsync();
+            OnDataLoaded();
+        }
+
+        protected abstract void OnDataLoaded();
     }
 }
