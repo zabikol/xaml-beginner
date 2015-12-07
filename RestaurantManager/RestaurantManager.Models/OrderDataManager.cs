@@ -3,7 +3,7 @@
 namespace RestaurantManager.Models
 {
     public class OrderDataManager : DataManager
-    {       
+    {
         protected override void OnDataLoaded()
         {
             this.MenuItems = base.Repository.StandardMenuItems;
@@ -13,10 +13,24 @@ namespace RestaurantManager.Models
                 this.MenuItems[3],
                 this.MenuItems[5]
             };
+
+            //Property notification is handled in the Set methods
         }
 
-        public List<MenuItem> MenuItems { get; set; }
+        private List<MenuItem> menuItems;
 
-        public List<MenuItem> CurrentlySelectedMenuItems { get; set; }
+        public List<MenuItem> MenuItems
+        {
+            get { return menuItems; }
+            set { menuItems = value; NotifyPropertyChanged(); }
+        }
+
+        private List<MenuItem> currentlySelectedMenuItems;
+
+        public List<MenuItem> CurrentlySelectedMenuItems
+        {
+            get { return currentlySelectedMenuItems; }
+            set { currentlySelectedMenuItems = value; NotifyPropertyChanged(); }
+        }
     }
 }
