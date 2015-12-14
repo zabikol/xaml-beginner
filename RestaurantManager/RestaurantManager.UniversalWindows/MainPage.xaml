@@ -19,6 +19,13 @@
         <TextBlock Text="Restaurant Manager" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
         <TextBlock Text="Internal Test Version" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
         <Button Content="Go to Orders View" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Click="ExpeditePage_Click" />
-        <Button Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Click="OrderPage_Click" />
+        <Button Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Click="OrderPage_Click">
+            <Button.Resources>
+                <ControlTemplate x:Key="aaa" TargetType="Button" />
+            </Button.Resources>
+            <Button.Template>
+                <StaticResource ResourceKey="aaa" />
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>
