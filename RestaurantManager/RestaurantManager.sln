@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantManager.UniversalWindows", "RestaurantManager.UniversalWindows\RestaurantManager.UniversalWindows.csproj", "{4BDB9936-03D2-4F38-8D42-31D17B1C3C82}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5BFBB7BC-2FC2-4EEE-B1F9-6723168E8F5D} = {5BFBB7BC-2FC2-4EEE-B1F9-6723168E8F5D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantManager.Models", "RestaurantManager.Models\RestaurantManager.Models.csproj", "{5BFBB7BC-2FC2-4EEE-B1F9-6723168E8F5D}"
 EndProject

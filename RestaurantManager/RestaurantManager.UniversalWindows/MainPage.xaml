@@ -4,6 +4,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:local="using:RestaurantManager.UniversalWindows"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:i="using:Microsoft.Xaml.Interactivity"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
 
@@ -15,6 +16,10 @@
             <local:BooleanToVisibilityConverter />
         </local:ValueConverterGroup>
     </Page.Resources>
+
+    <i:Interaction.Behaviors>
+        <local:ShowDialogOnRightTappedBehavior Message="From Page" Title="PageInfo" />
+    </i:Interaction.Behaviors>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -30,6 +35,11 @@
                    Grid.ColumnSpan="2"
                    VerticalAlignment="Bottom"
                    HorizontalAlignment="Center" />
+        <Button Content="Please" Margin="393,204,0,48">
+            <i:Interaction.Behaviors>
+                <local:ShowDialogOnRightTappedBehavior Message="Pretty please" />
+            </i:Interaction.Behaviors>
+        </Button>
         <TextBlock Text="Internal Test Version"
                    Grid.ColumnSpan="2"
                    Grid.Row="1"
@@ -46,7 +56,11 @@
                 Click="OrdersButton_Click"
                 Grid.Row="2"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center" />
+                HorizontalAlignment="Center">
+            <i:Interaction.Behaviors>
+                <local:ShowDialogOnRightTappedBehavior Message="From Button" />
+            </i:Interaction.Behaviors>
+        </Button>
         <Button x:Name="SubmitButton"
                 Content="Submit Order"
                 Click="SubmitButton_Click"
