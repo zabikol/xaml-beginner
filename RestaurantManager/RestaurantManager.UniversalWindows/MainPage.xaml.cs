@@ -48,7 +48,7 @@ namespace RestaurantManager.UniversalWindows
         private async void LoadData()
         {
             IsLoading = true;
-            await Task.Delay(5000);
+            await Task.Delay(500);
             IsLoading = false;
         }
     }
