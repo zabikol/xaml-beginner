@@ -1,0 +1,39 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:RestaurantManager.UniversalWindows">
+
+    <Style TargetType="local:UserIndicator">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Background" Value="LightGray" />
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:UserIndicator">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Height="60" Width="60">
+                                <Border.Background>
+                                    <SolidColorBrush Color="{Binding StatusColor, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" />
+                                </Border.Background>
+                                <TextBlock Text="{Binding Ping,
+                                                          RelativeSource={RelativeSource TemplatedParent},
+                                                          Mode=OneWay}"
+                                           FontSize="8"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Bottom" />
+                            </Border>
+                            <TextBlock Text="{TemplateBinding Username}"
+                                       FontSize="20"
+                                       Margin="12"
+                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
