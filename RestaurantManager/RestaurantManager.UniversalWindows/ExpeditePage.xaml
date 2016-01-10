@@ -4,11 +4,15 @@
       xmlns:local="using:RestaurantManager.UniversalWindows"
       xmlns:models="using:RestaurantManager.Models"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:shared="using:RestaurantManager.Shared"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
     <Page.DataContext>
         <models:ExpediteDataManager />
     </Page.DataContext>
+    <Page.Resources>
+        <shared:BooleanToColorBrushConverter x:Name="TrueToRed" True_Color="Red" False_Color="Transparent" />
+    </Page.Resources>
     <Page.TopAppBar>
         <AppBar>
             <AppBarButton Label="Home" Click="MainPage_Click">
@@ -28,8 +32,9 @@
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Button>
-                        <StackPanel Width="200" Height="300">
-                            <ListView Name="Items" ItemsSource="{Binding Items}" RelativePanel.AlignTopWithPanel="True" Height="200">
+
+                        <StackPanel Width="200" Height="300" Margin="5">
+                            <ListView Name="Items" ItemsSource="{Binding Items}" Height="200"  Background="{Binding Path=Expedite, Converter={StaticResource TrueToRed}}">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Title}" Margin="2" Style="{ThemeResource BodyTextBlockStyle}" />
@@ -38,15 +43,10 @@
                             </ListView>
 
                             <ScrollViewer Height="50">
-                                <TextBlock RelativePanel.AlignBottomWith="Items"
-                                           Text="{Binding SpecialRequests}"
-                                           Style="{ThemeResource BodyTextBlockStyle}"
-                                           Margin="5"
-                                           Width="Auto" />
+                                <TextBlock Text="{Binding SpecialRequests}" Style="{ThemeResource BodyTextBlockStyle}" Margin="5" Width="Auto" />
                             </ScrollViewer>
 
-                            <Button RelativePanel.AlignBottomWithPanel="True"
-                                    Content="Delete"
+                            <Button Content="Delete"
                                     HorizontalAlignment="Stretch"
                                     VerticalAlignment="Bottom"
                                     Style="{StaticResource TextBlockButtonStyle}"
