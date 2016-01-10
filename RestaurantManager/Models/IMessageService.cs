@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Class1
+    public interface IMessageService
     {
+        void ShowDialog(string message);
     }
 }
