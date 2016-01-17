@@ -107,6 +107,8 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpediteViewModel.cs" />
+    <Compile Include="OrderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestaurantManager.cs" />
     <Compile Include="ViewModel.cs" />
@@ -116,6 +118,10 @@
     <ProjectReference Include="..\RestaurantManager.Models\RestaurantManager.Models.csproj">
       <Project>{7ea2b405-e454-4f0c-a8c3-d6bf3f814f5c}</Project>
       <Name>RestaurantManager.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantManager.Shared\RestaurantManager.Shared.csproj">
+      <Project>{f93affd2-9315-4fd4-8bb8-1235d8542416}</Project>
+      <Name>RestaurantManager.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

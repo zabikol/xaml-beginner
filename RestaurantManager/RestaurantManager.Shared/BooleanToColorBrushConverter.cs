@@ -58,5 +58,5 @@ namespace RestaurantManager.Shared
 
             return default(bool);
         }
-    }
+    }
 }

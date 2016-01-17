@@ -11,9 +11,6 @@ namespace RestaurantManager.Models
 
         public decimal Price { get; set; }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        public override string ToString() => base.ToString();
     }
 }

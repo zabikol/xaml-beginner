@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BooleanToColorBrushConverter.cs" />
+    <Compile Include="DelegateCommand.cs" />
     <Compile Include="MessageOnRightTapBehaviour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\RestaurantManager.Shared.rd.xml" />
